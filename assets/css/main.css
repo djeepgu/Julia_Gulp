@@ -416,7 +416,7 @@ a {
 
 header {
   z-index: 1;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.5);
   position: fixed;
   top: 0;
   width: 1024px;
@@ -424,6 +424,8 @@ header {
   height: 64px;
   left: 50%;
   margin-right: -50%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0); }
   header .logo {
@@ -458,7 +460,7 @@ header {
           margin-bottom: 1px;
           margin-left: -4px;
           padding: 8px 0;
-          background-color: rgba(255, 255, 255, 0.7);
+          background-color: rgba(255, 255, 255, 0.5);
           text-align: center;
           display: block;
           clear: left; }
@@ -591,13 +593,132 @@ header {
     .homePageContent .activeImg img {
       box-shadow: 5px 5px 5px #888888; }
 
-.contactTitle {
+.contactWrap {
   position: relative;
-  text-align: center;
-  top: 200px; }
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  width: 1024px;
+  height: 100vh;
+  margin: 0 auto;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  .contactWrap .emailAddress {
+    font-size: 30px; }
 
-.emailAddress {
+.statementHolder {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  margin: 0 auto;
   position: relative;
-  display: block;
   text-align: center;
-  top: 250px; }
+  width: 1024px;
+  height: 100vh; }
+  .statementHolder p.statement {
+    padding: 2em;
+    margin: 0 auto;
+    letter-spacing: 0.03em;
+    line-height: 150%; }
+
+.collageContainer {
+  z-index: -1;
+  text-align: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  position: relative;
+  margin: 0 auto;
+  width: auto;
+  max-width: 100%;
+  height: 100vh; }
+  .collageContainer img {
+    width: inherit;
+    height: inherit; }
+
+.arrows {
+  border-radius: 20px;
+  position: fixed;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  right: 64px;
+  bottom: 64px;
+  width: 70px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.5); }
+  .arrows .upArrow {
+    height: 50px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+    .arrows .upArrow span {
+      color: rgba(0, 0, 0, 0.5);
+      display: block;
+      font-size: 30px;
+      text-align: center;
+      padding: 8px 10px; }
+      .arrows .upArrow span:hover {
+        color: rgba(0, 0, 0, 0.8);
+        cursor: pointer; }
+  .arrows .downArrow {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    height: 50px; }
+    .arrows .downArrow span {
+      color: rgba(0, 0, 0, 0.5);
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg);
+      padding: 8px 10px;
+      display: block;
+      font-size: 30px;
+      text-align: center; }
+      .arrows .downArrow span:hover {
+        color: rgba(0, 0, 0, 0.8);
+        cursor: pointer; }
+
+.carousels {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  width: 1024px;
+  margin: 0 auto;
+  top: 96px; }
+  .carousels .carouselHolder {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    width: 150px;
+    max-width: 150px;
+    height: 704px;
+    position: relative;
+    overflow-y: scroll; }
+    .carousels .carouselHolder img {
+      width: 100%;
+      padding: 0 5px 10px 5px;
+      opacity: 0.7; }
+      .carousels .carouselHolder img:hover {
+        opacity: 1; }
+  .carousels .largeCarousel {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    width: 824px;
+    max-width: 824px;
+    height: 100vh;
+    -ms-flex-align: center;
+        align-items: center; }
+    .carousels .largeCarousel img {
+      width: 100%;
+      padding: 0 10px 200px 10px; }
+      .carousels .largeCarousel img:last-child {
+        padding-bottom: 64px; }
