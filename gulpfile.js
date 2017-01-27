@@ -90,10 +90,12 @@ gulp.task('jade', function () {
 /**
  * Watch scss files for changes & recompile
  * Watch html/md files, run jekyll & reload BrowserSync
+ * watch jade files and compile
  */
+
 gulp.task('watch', function () {
     gulp.watch('assets/css/**', ['sass']);
-    gulp.watch(['*.html', '../pages/**', '_includes/*'], ['jekyll-rebuild']);
+    gulp.watch(['*.html', 'projects/*', '_includes/*'], ['jekyll-rebuild']);
     gulp.watch('_jadeFiles/*.jade', ['jade']);
 });
 

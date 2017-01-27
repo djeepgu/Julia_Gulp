@@ -533,7 +533,8 @@ header {
           -webkit-animation-timing-function: ease-in-out;
                   animation-timing-function: ease-in-out;
           -webkit-animation-fill-mode: forwards;
-                  animation-fill-mode: forwards; }
+                  animation-fill-mode: forwards;
+          margin: 2px 14px 14px 18px; }
 
 @-webkit-keyframes hoverIn {
   0% {
