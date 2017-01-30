@@ -1,4 +1,19 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300");
+@font-face {
+  font-family: OpenSansCondensed;
+  src: url("/assets/fonts/Open_Sans_Condensed/OpenSans-CondLight.ttf"); }
+
+@font-face {
+  font-family: Inconsolata;
+  src: url("/assets/fonts/Inconsolata/Inconsolata-Regular.ttf"); }
+
+@font-face {
+  font-family: Abel;
+  src: url("/assets/fonts/Abel/Abel-Regular.ttf"); }
+
+@font-face {
+  font-family: Economica;
+  src: url("/assets/fonts/Economica/Economica-Regular.ttf"); }
+
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -9,7 +24,7 @@
 /* Document
    ========================================================================== */
 html {
-  font-family: sans-serif;
+  font-family: OpenSansCondensed;
   /* 1 */
   line-height: 1.15;
   /* 2 */
@@ -404,7 +419,7 @@ template {
   display: none; }
 
 html {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'OpenSansCondensed', 'Inconsolata', 'Abel', 'Economica';
   background-color: white;
   color: black; }
 
@@ -629,7 +644,7 @@ header {
     line-height: 150%; }
 
 .collageContainer {
-  z-index: -1;
+  z-index: 0;
   text-align: center;
   display: -ms-flexbox;
   display: flex;
