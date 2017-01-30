@@ -531,53 +531,59 @@ header {
         width: 220px;
         max-width: 220px;
         margin: 0 16px 16px 16px;
+        box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.6);
+        -webkit-filter: grayscale(100%);
+                filter: grayscale(100%);
         -webkit-animation-name: hoverOut;
                 animation-name: hoverOut;
         -webkit-animation-duration: 150ms;
                 animation-duration: 150ms;
-        -webkit-animation-timing-function: ease-in-out;
-                animation-timing-function: ease-in-out;
+        -webkit-animation-timing-function: ease;
+                animation-timing-function: ease;
         -webkit-animation-fill-mode: forwards;
                 animation-fill-mode: forwards; }
         .homePageContent .photoGrid .thumbContainer img:hover {
-          opacity: 1;
+          -webkit-filter: none;
+                  filter: none;
           -webkit-animation-name: hoverIn;
                   animation-name: hoverIn;
           -webkit-animation-duration: 150ms;
                   animation-duration: 150ms;
-          -webkit-animation-timing-function: ease-in-out;
-                  animation-timing-function: ease-in-out;
+          -webkit-animation-timing-function: ease;
+                  animation-timing-function: ease;
           -webkit-animation-fill-mode: forwards;
                   animation-fill-mode: forwards;
-          margin: 2px 14px 14px 18px; }
+          -webkit-transform: translate(0, -1px);
+                  transform: translate(0, -1px);
+          box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.5); }
 
 @-webkit-keyframes hoverIn {
-  0% {
-    opacity: 1; }
+  0% { }
   100% {
-    opacity: 0.5;
-    box-shadow: 5px 5px 5px #888888; } }
+    -webkit-filter: none;
+            filter: none; } }
 
 @keyframes hoverIn {
-  0% {
-    opacity: 1; }
+  0% { }
   100% {
-    opacity: 0.5;
-    box-shadow: 5px 5px 5px #888888; } }
+    -webkit-filter: none;
+            filter: none; } }
 
 @-webkit-keyframes hoverOut {
   0% {
-    opacity: 0.5;
-    box-shadow: 5px 5px 5px #888888; }
-  100% {
-    opacity: 1; } }
+    -webkit-filter: none;
+            filter: none; }
+  100% { } }
 
 @keyframes hoverOut {
   0% {
-    opacity: 0.5;
-    box-shadow: 5px 5px 5px #888888; }
-  100% {
-    opacity: 1; } }
+    -webkit-filter: none;
+            filter: none; }
+  100% { } }
+  .homePageContent .photoGrid .activeImg img {
+    box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.5);
+    -webkit-filter: none;
+            filter: none; }
   .homePageContent .photoPreview {
     display: none;
     position: relative;
@@ -604,10 +610,6 @@ header {
       left: 0; }
       .homePageContent .isNav .thumbContainer img {
         width: 150px; }
-  .homePageContent .activeImg {
-    opacity: 0.5; }
-    .homePageContent .activeImg img {
-      box-shadow: 5px 5px 5px #888888; }
 
 .contactWrap {
   position: relative;
