@@ -21,7 +21,7 @@ $( document ).ready(function() {
         // removeClass(‘activeImg’) from siblings
         $(this).siblings().removeClass('activeImg');
         // change image in photoPreview to relative clicked thumb
-        $('.photoPreview').children().attr("src", "/assets/img/grid/grid-"+clickedId+".jpg");
+        $('.photoPreview').children().fadeIn(1000).attr("src", "/assets/img/grid/grid-"+clickedId+".jpg");
         // scrollTo active clicked thumb
         $('.photoGrid').scrollTo("div:nth-child("+clickedId+")",500)
       }
@@ -34,7 +34,10 @@ $( document ).ready(function() {
       // change image in photoPreview to relative clicked thumb
       $('.photoPreview').children().attr("src", "/assets/img/grid/grid-"+clickedId+".jpg");
       // show photoPreview
-      $('.photoPreview').css('display','block');
+      $('.photoPreview').delay(500).fadeIn().queue( function (showMe) {
+        $(this).show();
+        showMe();
+      });
       // scrollTo active clicked thumb
       $('.photoGrid').scrollTo("div:nth-child("+clickedId+")",500)
     }
