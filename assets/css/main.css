@@ -448,7 +448,8 @@ header {
   max-height: 64px;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0); }
+          transform: translate(-50%, 0);
+  box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.3); }
   header .logo {
     margin: 0;
     padding: 14px 0 14px 32px;
@@ -852,9 +853,6 @@ header {
       .carousels .largeCarousel img:last-child {
         padding-bottom: 64px; }
 
-* {
-  border: 1px dashed blue; }
-
 .tinder {
   position: fixed;
   display: -ms-flexbox;
@@ -880,10 +878,14 @@ header {
       -webkit-filter: grayscale(100%);
               filter: grayscale(100%);
       max-width: 80%;
-      padding: 10%; }
+      margin: 10%;
+      box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.6); }
       .tinder .small-carousel img:hover {
         -webkit-filter: none;
-                filter: none; }
+                filter: none;
+        -webkit-transform: translate(0, -1px);
+                transform: translate(0, -1px);
+        box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.5); }
   .tinder .large-carousel {
     position: fixed;
     right: 2.5%;
