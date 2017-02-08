@@ -446,7 +446,9 @@ header {
   max-width: 1024px;
   height: 8%;
   max-height: 64px;
-  left: 10%; }
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0); }
   header .logo {
     margin: 0;
     padding: 14px 0 14px 32px;
@@ -604,10 +606,12 @@ header {
                   transform: translate(0, -1px);
           box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.5); }
   .homePageContent .isNav {
-    transition: all 0.5s ease-in;
+    transition: all 0.5s linear;
     width: 15.625%;
     position: fixed;
     top: 12vh;
+    display: -ms-flexbox;
+    display: flex;
     text-align: center;
     height: 100%;
     max-width: 200px;
@@ -741,9 +745,9 @@ header {
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
+  text-align: justify;
   margin: 0 auto;
   position: relative;
-  text-align: center;
   width: 1024px;
   height: 100vh; }
   .statementHolder p.statement {
@@ -847,3 +851,52 @@ header {
       padding: 0 10px 200px 10px; }
       .carousels .largeCarousel img:last-child {
         padding-bottom: 64px; }
+
+* {
+  border: 1px dashed blue; }
+
+.tinder {
+  position: fixed;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  top: 8%;
+  width: 1280px;
+  height: 800px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0); }
+  .tinder .small-carousel {
+    position: fixed;
+    display: block;
+    overflow: scroll;
+    width: 10%;
+    height: 100%;
+    left: 2.5%; }
+    .tinder .small-carousel img {
+      -webkit-filter: grayscale(100%);
+              filter: grayscale(100%);
+      max-width: 80%;
+      padding: 10%; }
+      .tinder .small-carousel img:hover {
+        -webkit-filter: none;
+                filter: none; }
+  .tinder .large-carousel {
+    position: fixed;
+    right: 2.5%;
+    width: 80%;
+    height: inherit;
+    overflow: scroll; }
+    .tinder .large-carousel img {
+      max-width: 100%;
+      padding: 3% 0; }
+    .tinder .large-carousel #tinder-1 {
+      padding-top: 0; }
+    .tinder .large-carousel .project-title h1 {
+      text-align: center;
+      margin: 0 0 15px 0; }
+    .tinder .large-carousel .project-title p {
+      text-align: center; }

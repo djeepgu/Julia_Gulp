@@ -39,7 +39,10 @@ $( document ).ready(function() {
         showMe();
       });
       // scrollTo active clicked thumb
-      $('.photoGrid').scrollTo("div:nth-child("+clickedId+")",500)
+      $('.photoGrid').delay(500).queue( function (scroll) {
+        $(this).scrollTo("div:nth-child("+clickedId+")",400);
+        scroll();
+      });
     }
   });
   // photoPreview is clicked
